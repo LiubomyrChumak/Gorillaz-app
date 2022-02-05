@@ -25,9 +25,9 @@ Complete guide how to deploy local docker image with web application on Azure Ap
 ## Setup
 ---
 To run this project, you need to have installed:
--azure-cli
--docker
--latest pip version
+- azure-cli
+- docker
+- latest pip version
 
 
 ## Steps
@@ -90,9 +90,9 @@ To run this project, you need to have installed:
 `az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --is-linux`
 
 2. Create the web app:
-
-`az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name gorillazpageapp --deployment-container-image-name gorillazpage.azurecr.io/flask_docker:latest`
-
+```
+az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name gorillazpageapp --deployment-container-image-name gorillazpage.azurecr.io/flask_docker:latest
+```
 3. Use az webapp config appsettings set to set the 'WEBSITES_PORT' environment variable as expected by the app code:
 
 `az webapp config appsettings set --resource-group myResourceGroup --name gorillazpageapp --settings WEBSITES_PORT=8000`
