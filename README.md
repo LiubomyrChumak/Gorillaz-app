@@ -6,7 +6,9 @@
 - [General info](#general-info)
 - [Technologies](#technologies)
 - [Setup](#setup)
+- [Documentation](#documentation)
 - [Steps](#steps)
+
 
 
 
@@ -32,6 +34,9 @@ To run this project, you need to have installed:
 - docker
 - latest pip version
 
+## Documentation
+https://docs.docker.com/engine/install/
+https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux
 
 
 ## Steps
