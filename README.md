@@ -45,59 +45,60 @@ To run this project, you need to have installed:
 ### Step 1
 ---
 1. Download repo from GitHub:
-
-`git clone https://github.com/LiubomyrChumak/Gorillaz-app/` 
-
+```
+git clone https://github.com/LiubomyrChumak/Gorillaz-app/ 
+```
 2. Buid and test image locally:
-
-`sudo docker image build -t flask_docker .`
-
-`docker images`
-
+```
+sudo docker image build -t flask_docker .
+```
+```
+docker images
+```
 
 ### Step 2
 ---
 
 1. Login to Azure:
-
-`az login`
-
+```
+az login
+```
 2. Create a resource group:
-
-`az group create --name myResourceGroup --location westeurope`
-
+```
+az group create --name myResourceGroup --location westeurope
+```
 3. Push the image to ACR: 
 ```
 az acr create --name gorillazpage --resource-group myResourceGroup --sku Basic --admin-enabled true
 ```
 4. Check credentials:
-
-`az acr credential show -n gorillazpage`
-
+```
+az acr credential show -n gorillazpage
+```
 5. Sign in to the container registry:
-
-`sudo docker login gorillazpage.azurecr.io --username gorillazpage`
-
+```
+sudo docker login gorillazpage.azurecr.io --username gorillazpage
+```
 6. Tag your local Docker image for the registry:
-
-`sudo docker tag flask_docker gorillazpage.azurecr.io/flask_docker:latest`
-
+```
+sudo docker tag flask_docker gorillazpage.azurecr.io/flask_docker:latest
+```
 7. Push the image to the registry:
-
-`docker tag flask_docker gorillazpage.azurecr.io/flask_docker:latest`
-
+```
+docker tag flask_docker gorillazpage.azurecr.io/flask_docker:latest
+```
 8. Verify that the push was succesful:
-
-`az acr repository list -n gorillazpage`
-
+```
+az acr repository list -n gorillazpage
+```
 
 ### Step 3
 ---
 
 1. Create an AppService plan:
-
-`az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --is-linux`
-
+```
+az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --is-linux
+```
 
 2. Create the web app:
 ```
@@ -115,9 +116,9 @@ az webapp identity assign --resource-group myResourceGroup --name gorillazpageap
 ```
 
 5. Retrieve your subscription ID with the az account show command, which you need in the next step:
-
-`az account show --query id --output tsv`
-
+```
+az account show --query id --output tsv
+```
 6. Grant the managed identity permission to access the container registry:
 ```
 az role assignment create --assignee <principal-id> --scope /subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/gorillazpage --role "AcrPull"
