@@ -35,8 +35,8 @@ To run this project, you need to have installed:
 - latest pip version
 
 ## Documentation
-https://docs.docker.com/engine/install/
-https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux
+- https://docs.docker.com/engine/install/
+- https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux
 
 
 ## Steps
