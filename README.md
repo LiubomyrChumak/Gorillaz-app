@@ -16,10 +16,10 @@ Complete guide how to deploy local docker image with web application on Azure Ap
 
 ## Technologies
 ---
--Ubuntu
--Azure
--Docker
--Flask
+- Ubuntu
+- Azure
+- Docker
+- Flask
  
 
 ## Setup
@@ -31,10 +31,10 @@ To run this project, you need to have installed:
 
 
 ## Steps
----
+
 
 ### Step 1
-
+---
 1. Download repo from GitHub:
 
 'git clone https://github.com/LiubomyrChumak/Gorillaz-app/' 
