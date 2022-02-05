@@ -9,9 +9,11 @@
 - [Steps](#steps)
 
 
+
 ## General info
 
 Complete guide how to deploy local docker image with web application on Azure App Services.
+
 
 
 ## Technologies
@@ -22,12 +24,14 @@ Complete guide how to deploy local docker image with web application on Azure Ap
 - Flask
  
 
+
 ## Setup
 ---
 To run this project, you need to have installed:
 - azure-cli
 - docker
 - latest pip version
+
 
 
 ## Steps
@@ -118,6 +122,7 @@ az role assignment create --assignee <principal-id> --scope /subscriptions/<subs
 ```
 az resource update --ids /subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Web/sites/gorillazpageapp/config/web --set properties.acrUseManagedIdentityCreds=True
 ```
+
 
 ### Step 4
 ---
