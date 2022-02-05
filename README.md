@@ -67,9 +67,9 @@ To run this project, you need to have installed:
 `az group create --name myResourceGroup --location westeurope`
 
 3. Push the image to ACR: 
-
-`az acr create --name gorillazpage --resource-group myResourceGroup --sku Basic --admin-enabled true`
-
+```
+az acr create --name gorillazpage --resource-group myResourceGroup --sku Basic --admin-enabled true
+```
 4. Check credentials:
 
 `az acr credential show -n gorillazpage`
